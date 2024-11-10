@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список задач</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<link rel="shortcut icon" href="favicon.png">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo" id="logo">
+                <img src="logo.png" alt="Логотип">
+              </a>
+            <div class="menu-icon" id="menu-icon">
+                &#9776;
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" >Главная</a></li>
+              <li><a href="projects.html">Проекты</a></li>
+              <li><a href="tasks.html"class="active">Список задач</a></li>
+              <li><a href="about.html">О приложении</a></li>
+                <li><div class="close-icon" id="close-icon">&times;</div></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Список задач</h1>
+    <a>
+        <button id="openDialogButton">Добавить задачу</button>
+
+        <dialog id="myDialog">
+            <h2>Добавить задачу</h2>
+            <form action="#" method="get" id="add-task-form">
+                <label for="task-input">Введите задачу:</label><br>
+                <input type="text" id="task-input" name="task-input"><br><br>
+                <button type="submit">Добавить</button>
+            </form>
+            <button id="closeDialogButton">Закрыть</button>
+        </dialog>
+
+        <script src="script.js"></script>
+    </a>
+    <table>
+        <thead>
+            <tr>
+                <th>Задачи</th>
+                <th>В работе</th>
+                <th>Выполненные</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="Задачи">
+                <td>
+                    <button class="delete-button">Удалить</button>Полить цветы
+                    <span class="checkbox">
+                        <input type="checkbox">
+                    </span>
+                </td>
+                <td>
+
+                </td>
+                <td></td>
+            </tr class="В работе">
+            <td><button class="delete-button">Удалить</button></td>
+            <td><i>Купить продукты</i><span class="checkbox">
+                    <input type="checkbox">
+                </span></td>
+            <td> </td>
+            </tr>
+            <tr class="Выполненные">
+                <td><button class="delete-button">Удалить</button></td>
+                <td></td>
+                <td>
+                    <span class="checkbox">
+                        <input type="checkbox">
+                    </span><b><del>Записаться к врачу</del></b>
+                </td>
+            </tr>
+            <tr>
+                <td><button class="delete-button">Удалить</button>Задача №4<span class="checkbox">
+                        <input type="checkbox">
+                    </span></td>
+                <td>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><button class="delete-button">Удалить</button></td>
+                <td><i>Задача №5</i><span class="checkbox">
+                        <input type="checkbox">
+                    </span></td>
+                <td>
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="pclass"></p>
+</body>
+
+</html>
