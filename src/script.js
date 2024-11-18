@@ -22,4 +22,3 @@ window.addEventListener('click', function(event) {
         myDialog.close();
     }
 });
-

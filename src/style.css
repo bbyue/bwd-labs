@@ -68,7 +68,7 @@ img {
 table {
     border-collapse: collapse;
     font-size: 20px; 
-    width: 100%;
+    width: 100vw;
     margin: 10 auto; 
 }
 
@@ -90,7 +90,7 @@ th {
 }
 
 .task-column {
-    width: 33.33%;
+    width: 33.33vw;
 }
 
 .task {
@@ -261,6 +261,14 @@ header {
         margin-right: 10px; 
         font-size: 40px;
     }
+
+   th{
+    font-size: 16px;
+   }
+
+   th, td {
+    font-size: 16px;
+   }
    
     .close-icon {
         display: block;
