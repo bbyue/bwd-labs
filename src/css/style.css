@@ -1,0 +1,26 @@
+body {
+    font-family: book-antiqua;
+    background-color: #fff;
+    color: #333;
+    margin: 0;
+    height: 100%;
+    padding-top: 90px;
+}
+h1 {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 50px;
+    margin: 20px 0;
+}
+   p {
+    text-align: center;
+    font-size: 30px;
+    line-height: 1.5;
+   }
+
+   .pclass {
+    text-align: center;
+    margin: 500px auto 30px;
+    font-size: 30px;
+    line-height: 1.5;
+   }
