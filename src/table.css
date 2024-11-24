@@ -1,4 +1,12 @@
 
+h3 {
+    border-bottom: 1px solid #acacac; 
+    background-color: #dedede;
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 28px;
+    margin: 10px 0px;
+}
 dialog {
     font-family: book-antiqua;
     position: fixed;
@@ -19,6 +27,7 @@ dialog {
 
 #add-task-form label,
 #add-task-form input[type="text"] {
+    font-family: book-antiqua;
     font-size: 20px;
     width: 100%;
     padding: 10px;
@@ -45,71 +54,109 @@ dialog {
 #add-task-form input[type="submit"]:hover {
     background-color: #555;
 }
+#searchInput {
+    padding: 10px 20px;
+    font-family: book-antiqua;
+    margin-left: 10px;
+    font-size: 18px;
+    accent-color:#333;
+    background-color: #fff;
+    color: #333;
+    border-color: #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+  }
+  
+  .table {
+    margin-top: 20px;
+    border-collapse: collapse; 
+    width: 100%; 
+   }
+   
+   .task-columns {
+    display: flex; 
+   }
+   
+   .task-column {
+    border: 1px solid #acacac; 
+    flex: 1; 
+   
+   }
+   
+   .task-list {
+    
+    list-style: none;
+    padding: 0;
+    margin: 0;
+   }
+   
+   .task-item {
+    display: flex;
+    width: 90%;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 15px 10px;
+   }
+   
+   .task-container {
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+   }
+   
+   .task-container span {
+    margin-left: 10px;
+   }
+   
+   .task-checkbox {
+    accent-color: #000000;
+    margin-top: 5px;
+    margin-left: 10px;
+   }
+   
+   .task-delete {
+    font-family: book-antiqua;
+    font-size: 18px;
+    background-color: #333; 
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+   }
+   .task-delete:hover {
+    background-color: #555555;
+   }
 
-table {
-    border-collapse: collapse;
-    font-size: 20px; 
-    width: 100%;
-    margin: 10 auto; 
+   .task-column h3 {
+    margin-top: 0;
+   }
+   
+   .task-column, .task-list, .task-item, .task-container {
+    margin: 0; 
+   }
+
+ul {
+    font-family: book-antiqua;
+    padding: 0;
 }
 
+li {
+    font-family: book-antiqua;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+}
 .completed {
     text-decoration: line-through;
     color: gray;
 }
 
-th, td {
-    padding: 15px;
-    font-size: 20px; 
-    text-align: center;
-    border: 1px solid #acacac;
-}
-
-th {
-    font-size: 24px; 
-    background-color: #dedede;
-}
-
-.task-column {
-    width: 33.33%;
-}
-
-.task {
-    display: flex;
-    align-items: center;
-}
-
-.task-name {
-    margin-right: 10px;
-}
-
-.checkbox {
-    margin-right: 10px;
-    accent-color: #000000;
-}
-
-.checkbox input[type="checkbox"] {
-    width: 20px;
-    height: 20px;
-    accent-color: #000000;
-}
-.delete-button {
-    margin-right: 10px;
-    font-family: book-antiqua;
-    background-color: #303030;
-    font-size: 20px;
-    color: #E9E9ED;
-    border: none;
-    align-items: left;
-    border-radius: 4px;
-    padding: 5px 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.delete-button:hover {
-    background-color: #555555;
-}
 a {
     font-family: book-antiqua;
     display: block;
@@ -133,59 +180,16 @@ a button:hover {
     background-color: #555555;
 }
 
-  
-header {
-    background-color: #F0F0F0;
-    color: #333333;
-    position: fixed;
-    top: 0;
-    left: 0; 
-    right: 0;
-    z-index: 5000;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px;
-}
-.logo{
-    margin-top: 10px;
-    margin-right: 10px;
-}
-.nav-links {
-    margin-top: 30px;
+@media (max-width: 768px) {
+h3{
     font-size: 20px;
-    font-weight: bold;
-    list-style: none;
-    display: flex;
+    
 }
-
-.nav-links li {
-    margin-left: 20px;
-}
-
-.nav-links a.active {
-    text-decoration: underline;
-    pointer-events: none; 
-    color: gray;
-    cursor: default;
-}
-
-.nav-links a {
-    color: #333333;
-    text-decoration: none;
-}
-
-.menu-icon {
-    display: none;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-.close-icon {
-    font-size: 24px;
-    cursor: pointer;
-    color: #333333;
+.task-columns {
+    flex-direction: column;
+   }
+   .task-column {
+    flex: 1 1 100%; 
+    margin-bottom: 20px;
+   }
 }
