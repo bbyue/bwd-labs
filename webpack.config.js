@@ -1,6 +1,6 @@
-const path = require('path'); // Импортируем модуль path
-const HtmlWebpackPlugin = require('html-webpack-plugin'); // Импортируем HtmlWebpackPlugin
-
+const path = require('path'); 
+const HtmlWebpackPlugin = require('html-webpack-plugin'); 
+const CopyPlugin = require('copy-webpack-plugin');
 module.exports = {
     entry: './src/index.js',
 
@@ -12,17 +12,17 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /.css$/, // Для обработки CSS файлов
+                test: /.css$/,
                 use: ['style-loader', 'css-loader'],
             },
             {
-                test: /.(png|jpg|gif|svg)$/, // Для обработки изображений
+                test: /.(png|jpg|gif|svg)$/, 
                 use: [
                     {
                         loader: 'file-loader',
                         options: {
-                            name: '[name].[ext]', // Формат имени выходного файла
-                            outputPath: './', // Папка для изображений
+                            name: '[name].[ext]',
+                            outputPath: './img/', 
                         },
                     },
                 ],
@@ -31,6 +31,11 @@ module.exports = {
     },
 
     plugins: [
+        new CopyPlugin({
+            patterns: [
+                {from: './src/img/favicon.png', to: 'dist'},
+            ],
+        }),
         new HtmlWebpackPlugin({
             template: './src/index.html',
             inject: true,
