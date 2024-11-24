@@ -36,72 +36,33 @@
         <dialog id="myDialog">
             <h2>Добавить задачу</h2>
             <form action="#" method="get" id="add-task-form">
-                <label for="task-input">Введите задачу:</label><br>
-                <input type="text" id="task-input" name="task-input"><br><br>
-                <button type="submit">Добавить</button>
+                <input type="text" id="taskInput" placeholder="Введите задачу...">
+        <button id="addTaskButton">Добавить</button>
             </form>
             <button id="closeDialogButton">Закрыть</button>
         </dialog>
-
-        <script src="menu.js"></script>
-        <script src="addTask.js"></script>
     </a>
-    <table>
-        <thead>
-            <tr>
-                <th>Задачи</th>
-                <th>В работе</th>
-                <th>Выполненные</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr class="Задачи">
-                <td>
-                    <button class="delete-button">Удалить</button>Полить цветы
-                    <span class="checkbox">
-                        <input type="checkbox">
-                    </span>
-                </td>
-                <td>
-
-                </td>
-                <td></td>
-            </tr class="В работе">
-            <td><button class="delete-button">Удалить</button></td>
-            <td><i>Купить продукты</i><span class="checkbox">
-                    <input type="checkbox">
-                </span></td>
-            <td> </td>
-            </tr>
-            <tr class="Выполненные">
-                <td><button class="delete-button">Удалить</button></td>
-                <td></td>
-                <td>
-                    <span class="checkbox">
-                        <input type="checkbox">
-                    </span><b><del>Записаться к врачу</del></b>
-                </td>
-            </tr>
-            <tr>
-                <td><button class="delete-button">Удалить</button>Задача №4<span class="checkbox">
-                        <input type="checkbox">
-                    </span></td>
-                <td>
-                </td>
-                <td></td>
-            </tr>
-            <tr>
-                <td><button class="delete-button">Удалить</button></td>
-                <td><i>Задача №5</i><span class="checkbox">
-                        <input type="checkbox">
-                    </span></td>
-                <td>
-
-                </td>
-            </tr>
-        </tbody>
-    </table>
+    <input type="text" id="searchInput" placeholder="Поиск задач...">
+    <div class="table">
+        <div class="task-columns">
+            <div class="task-column" id="toDoColumn">
+                <h3>Задачи</h3>
+                <ul class="task-list" id="toDoList"></ul>
+            </div>
+            <div class="task-column" id="inProgressColumn">
+                <h3>В работе</h3>
+                <ul class="task-list" id="inProgressList"></ul>
+            </div>
+            <div class="task-column" id="completedColumn">
+                <h3>Выполненные</h3>
+                <ul class="task-list" id="completedList"></ul>
+            </div>
+        </div>
+    </div>
+</div>
     <p class="pclass"></p>
+    <script src="menu.js"></script>
+    <script src="addTask.js"></script>
 </body>
 
 </html>
